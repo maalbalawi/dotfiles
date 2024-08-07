@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-# Make vim the default editor.
+# Make nano the default editor.
 export EDITOR='nano';
+export VISUAL='nano';
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
+export HISTSIZE='2000';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
@@ -18,3 +19,15 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+export HSA_OVERRIDE_GFX_VERSION=10.3.1
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+
+export REPO="$HOME/projects"
+export DOTNET_ROOT="$HOME/.dotnet"
+# set PATH environment variable
+
+export PATH="$PATH:~/bin:$DOTNET_ROOT:$DOTNET_ROOT/tools:$REPO:$HOME/.local/bin"
+export CDPATH="$HOME:$REPO"
+
